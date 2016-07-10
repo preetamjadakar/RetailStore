@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface ProductViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate>
+#import "ProductCell.h"
+
+@interface ProductViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate,ProductCellProtocol>
 
 @end

@@ -13,13 +13,12 @@
     // Initialization code
     
 
-//    self.forecastTableView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
+//    self.CartTableView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
 }
 
-- (IBAction)removeCell:(id)sender {
-    
-    if ([self.delegate respondsToSelector:@selector(removeButtonClicked:)]) {
-        [self.delegate removeButtonClicked:self];
+- (IBAction)addToCart:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(addToCartFromCell:)]) {
+        [self.delegate addToCartFromCell:self];
     }
 }
 @end

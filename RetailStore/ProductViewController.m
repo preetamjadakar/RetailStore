@@ -9,8 +9,8 @@
 #import "ProductViewController.h"
 #import "MBProgressHUD.h"
 #import "WebServiceCommunicator.h"
-#import "ProductCell.h"
 #import "Product.h"
+#import "AppDelegate.h"
 #define kNetworkErrorMessage @"Internet or Wi fi is not available."
 #define kProductCellID @"ProductCellId"
 #define PADDING 10
@@ -29,12 +29,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //fetch data
     
     
     self.activityIndicatorView = [[MBProgressHUD alloc] initWithView:self.view];
     [self.navigationController.view addSubview:self.activityIndicatorView];
     self.activityIndicatorView.opacity = 0.5;
+    
+    
+    //fetch data
+    [self fetchData];
     
     
     
@@ -43,13 +46,12 @@
     
     [self.productsCollectionView registerNib:[UINib nibWithNibName:@"ProductCell" bundle:nil] forCellWithReuseIdentifier:kProductCellID];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-//    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    //    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     layout.sectionInset = UIEdgeInsetsMake(PADDING, PADDING,PADDING*3, PADDING);
-    layout.minimumInteritemSpacing = PADDING*2;
+    layout.minimumInteritemSpacing = PADDING;
     [self.productsCollectionView setCollectionViewLayout:layout];
     
     
-    [self fetchData];
     
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -74,15 +76,17 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCell *cell =
     (ProductCell *)[self.productsCollectionView dequeueReusableCellWithReuseIdentifier:kProductCellID
-                                                                        forIndexPath:indexPath];
+                                                                          forIndexPath:indexPath];
     cell.delegate = self;
     
     [self addSomeBorderToCell:cell];
     Product *product = [self.dataSource objectAtIndex:indexPath.row];
     
-//    cell.cityName = product.cityName;
-//    cell.forecastDataArray = product.forecastArray;
-    
+    cell.productName.text = product.productName;
+    cell.priceLabel.text = [NSString stringWithFormat:@" Price: %@",product.productPrice];
+    cell.vNameLabel.text = product.venderName;
+    cell.vAddLabel.text= product.venderAddress;
+    //    cell.productImage.image = [UIImage ima]
     // to refresh table in collectionview cell
     
     return cell;
@@ -97,10 +101,18 @@
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize collectionViewSize = self.productsCollectionView.bounds.size;
-    return CGSizeMake(collectionViewSize.width/2-2*PADDING, collectionViewSize.width/2-2*PADDING);
+    return CGSizeMake(collectionViewSize.width/2-2*PADDING, 275);
+}
+#pragma mark - Product cell click Deleagte method
+-(void)addToCartFromCell:(ProductCell *)cell{
+    
+    NSIndexPath *selectedIndexPath = [self.productsCollectionView indexPathForCell:cell];
+    if (selectedIndexPath) {
+        AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [appDel.cartDataArray addObject:[self.dataSource objectAtIndex:selectedIndexPath.row]];
+    }
 }
 #pragma mark WebserviceCommunicator Delegate Response
-//just to avaid code redundency, made it reusable
 -(void)fetchData
 {
     if ([[WebServiceCommunicator sharedInstance]isNetworkConnection]) {
@@ -110,10 +122,9 @@
             
             if (error == nil) {
                 self.dataSource = [NSMutableArray new];
-
+                
                 self.dataSource = data;
                 [self.productsCollectionView reloadData];
-                
                 [self.activityIndicatorView hide:YES];
                 
             }

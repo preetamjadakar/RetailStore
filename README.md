@@ -3,11 +3,14 @@
 
 Application uses the https://mobiletest-hackathon.herokuapp.com/getdata/ APIs to fetch the product data.
 
+##Motivation:
+
+Implementation of Shopping Cart.
+
 
 ##Disclaimer:
 
-Results are solely depends on  APIs used
-
+Currently application is not using any local database to store items added in Cart. So after closing app, carted items will get removed.
 
 ##Device Family Suported:
 

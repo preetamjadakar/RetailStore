@@ -19,6 +19,10 @@
 		172B7AFC1D32924900C29419 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172B7AF81D32924900C29419 /* ProductCell.xib */; };
 		172B7B021D329E7F00C29419 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 172B7B011D329E7F00C29419 /* Product.m */; };
 		172B7B031D329E7F00C29419 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 172B7B011D329E7F00C29419 /* Product.m */; };
+		172B7B071D32B74100C29419 /* CartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 172B7B051D32B74100C29419 /* CartCell.m */; };
+		172B7B081D32B74100C29419 /* CartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 172B7B051D32B74100C29419 /* CartCell.m */; };
+		172B7B091D32B74100C29419 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172B7B061D32B74100C29419 /* CartCell.xib */; };
+		172B7B0A1D32B74100C29419 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172B7B061D32B74100C29419 /* CartCell.xib */; };
 		AC4434A21D30ED9300FA10AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4434A11D30ED9300FA10AC /* main.m */; };
 		AC4434A51D30ED9300FA10AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4434A41D30ED9300FA10AC /* AppDelegate.m */; };
 		AC4434AB1D30ED9300FA10AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4434A91D30ED9300FA10AC /* Main.storyboard */; };
@@ -51,6 +55,9 @@
 		172B7AF81D32924900C29419 /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		172B7B001D329E7F00C29419 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		172B7B011D329E7F00C29419 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		172B7B041D32B74100C29419 /* CartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartCell.h; sourceTree = "<group>"; };
+		172B7B051D32B74100C29419 /* CartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartCell.m; sourceTree = "<group>"; };
+		172B7B061D32B74100C29419 /* CartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
 		AC44349D1D30ED9300FA10AC /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4434A11D30ED9300FA10AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC4434A31D30ED9300FA10AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +128,9 @@
 				172B7AF61D32924900C29419 /* ProductCell.h */,
 				172B7AF71D32924900C29419 /* ProductCell.m */,
 				172B7AF81D32924900C29419 /* ProductCell.xib */,
+				172B7B041D32B74100C29419 /* CartCell.h */,
+				172B7B051D32B74100C29419 /* CartCell.m */,
+				172B7B061D32B74100C29419 /* CartCell.xib */,
 			);
 			name = CellSubClassing;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 			files = (
 				172B7AFB1D32924900C29419 /* ProductCell.xib in Resources */,
 				AC4434B31D30ED9300FA10AC /* LaunchScreen.storyboard in Resources */,
+				172B7B091D32B74100C29419 /* CartCell.xib in Resources */,
 				AC4434B01D30ED9300FA10AC /* Assets.xcassets in Resources */,
 				AC4434AB1D30ED9300FA10AC /* Main.storyboard in Resources */,
 			);
@@ -273,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172B7B0A1D32B74100C29419 /* CartCell.xib in Resources */,
 				172B7AFC1D32924900C29419 /* ProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +300,7 @@
 				172B7B021D329E7F00C29419 /* Product.m in Sources */,
 				AC4434A51D30ED9300FA10AC /* AppDelegate.m in Sources */,
 				AC4434CD1D30F05600FA10AC /* CartViewController.m in Sources */,
+				172B7B071D32B74100C29419 /* CartCell.m in Sources */,
 				172B7AF91D32924900C29419 /* ProductCell.m in Sources */,
 				172B7AEC1D3291B800C29419 /* Reachability.m in Sources */,
 				172B7AEA1D3291B800C29419 /* MBProgressHUD.m in Sources */,
@@ -305,6 +318,7 @@
 				AC4434BE1D30ED9300FA10AC /* RetailStoreTests.m in Sources */,
 				172B7AF31D3291FB00C29419 /* WebServiceCommunicator.m in Sources */,
 				172B7AEB1D3291B800C29419 /* MBProgressHUD.m in Sources */,
+				172B7B081D32B74100C29419 /* CartCell.m in Sources */,
 				172B7AED1D3291B800C29419 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

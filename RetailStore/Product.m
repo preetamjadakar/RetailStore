@@ -2,8 +2,8 @@
 //  Product.m
 //  RetailStore
 //
-//  Created by SagarG on 10/07/16.
-//  Copyright © 2016 Guest User. All rights reserved.
+//  Created by Preetam Jadakar on 10/07/16.
+//  Copyright © 2016 Preetam Jadakar. All rights reserved.
 //
 
 #import "Product.h"

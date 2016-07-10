@@ -34,8 +34,7 @@
 
 -(void)fetchProductsListWithCompletionHandler:(void (^)(NSMutableArray *, NSError *))completionHandler
 {
-    NSString *apiString = nil;
-        apiString = [NSString stringWithFormat:@"https://mobiletest-hackathon.herokuapp.com/getdata/"];
+    NSString *apiString = [NSString stringWithFormat:@"https://mobiletest-hackathon.herokuapp.com/getdata/"];
    
     
     NSURL *URL = [NSURL URLWithString:apiString];
@@ -50,8 +49,6 @@
             
             if (dataDic) {
                 NSArray *data = [dataDic valueForKey:@"products"];
-//                
-//                
                 if ( data.count) {
                     
                     NSMutableArray *mainArray = [NSMutableArray new];
@@ -61,7 +58,9 @@
                         
                         pr.productName = [dic valueForKey:@"productname"];
                         pr.productPrice = [dic valueForKey:@"price"];
-
+                        pr.venderName = [dic valueForKey:@"vendorname"];
+                        pr.venderAddress = [dic valueForKey:@"vendoraddress"];
+                        pr.phoneNumber = [dic valueForKey:@"phoneNumber"];
                         [mainArray addObject:pr];
                     }
                     completionHandler(mainArray,nil);
