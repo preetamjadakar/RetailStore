@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface Product : NSObject
-@property(retain)NSString *productName;
-@property(retain)NSNumber *productPrice;
-@property(retain)NSString *imageURL;
-@property(retain)NSString *venderName;
-@property(retain)NSString *venderAddress;
-@property(retain)NSString *phoneNumber;
+@property(nonatomic)NSString *productName;
+@property(nonatomic)NSNumber *productPrice;
+@property(nonatomic)NSString *imageURL;
+@property(nonatomic)NSString *venderName;
+@property(nonatomic)NSString *venderAddress;
+@property(nonatomic)NSString *phoneNumber;
 
 
 @end

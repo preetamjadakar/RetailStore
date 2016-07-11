@@ -9,6 +9,7 @@
 #import "CartViewController.h"
 #import "Product.h"
 #import "AppDelegate.h"
+#import <UIImageView+WebCache.h>
 #define kCartCellID @"cartCellId"
 
 @interface CartViewController ()
@@ -17,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *emptyListMessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
 @property (weak, nonatomic) IBOutlet UIView *priceView;
-@property(retain)NSString *currentPhoneNumber;
+@property(nonatomic)NSString *currentPhoneNumber;
 @end
 
 @implementation CartViewController
@@ -91,7 +92,8 @@
     cell.priceLabel.text = [NSString stringWithFormat:@"Price:\n%@",product.productPrice];
     cell.vNameLabel.text = product.venderName;
     cell.vAddLabel.text= product.venderAddress;
-    //    cell.productImage.image = [UIImage ima]
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:product.imageURL]
+                         placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
     
     return cell;

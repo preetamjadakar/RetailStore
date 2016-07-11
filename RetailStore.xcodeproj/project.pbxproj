@@ -23,6 +23,7 @@
 		172B7B081D32B74100C29419 /* CartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 172B7B051D32B74100C29419 /* CartCell.m */; };
 		172B7B091D32B74100C29419 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172B7B061D32B74100C29419 /* CartCell.xib */; };
 		172B7B0A1D32B74100C29419 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172B7B061D32B74100C29419 /* CartCell.xib */; };
+		53D60394A47EB4A39F6F7781 /* libPods-RetailStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA72FD5E9EB9E1A3FB3925D /* libPods-RetailStore.a */; };
 		AC4434A21D30ED9300FA10AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4434A11D30ED9300FA10AC /* main.m */; };
 		AC4434A51D30ED9300FA10AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4434A41D30ED9300FA10AC /* AppDelegate.m */; };
 		AC4434AB1D30ED9300FA10AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4434A91D30ED9300FA10AC /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 		172B7B041D32B74100C29419 /* CartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartCell.h; sourceTree = "<group>"; };
 		172B7B051D32B74100C29419 /* CartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartCell.m; sourceTree = "<group>"; };
 		172B7B061D32B74100C29419 /* CartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		4A129197528DC1C8366D2646 /* Pods-RetailStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore.release.xcconfig"; sourceTree = "<group>"; };
+		7CA72FD5E9EB9E1A3FB3925D /* libPods-RetailStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44349D1D30ED9300FA10AC /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4434A11D30ED9300FA10AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC4434A31D30ED9300FA10AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		AC4434C91D30F04200FA10AC /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		AC4434CB1D30F05600FA10AC /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
 		AC4434CC1D30F05600FA10AC /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		F9900A5CC10CF68F4F8F79A3 /* Pods-RetailStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D60394A47EB4A39F6F7781 /* libPods-RetailStore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ABCAD0D9E70C2BDACECDB37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CA72FD5E9EB9E1A3FB3925D /* libPods-RetailStore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		172B7AEE1D3291C200C29419 /* ThirdPartyClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,12 +148,23 @@
 			name = CellSubClassing;
 			sourceTree = "<group>";
 		};
+		5FF6263430C853A0AB0FD08C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9900A5CC10CF68F4F8F79A3 /* Pods-RetailStore.debug.xcconfig */,
+				4A129197528DC1C8366D2646 /* Pods-RetailStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC4434941D30ED9300FA10AC = {
 			isa = PBXGroup;
 			children = (
 				AC44349F1D30ED9300FA10AC /* RetailStore */,
 				AC4434BC1D30ED9300FA10AC /* RetailStoreTests */,
 				AC44349E1D30ED9300FA10AC /* Products */,
+				5FF6263430C853A0AB0FD08C /* Pods */,
+				0ABCAD0D9E70C2BDACECDB37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC4434C21D30ED9300FA10AC /* Build configuration list for PBXNativeTarget "RetailStore" */;
 			buildPhases = (
+				4192B188D5798B3BC3E897A3 /* [CP] Check Pods Manifest.lock */,
 				AC4434991D30ED9300FA10AC /* Sources */,
 				AC44349A1D30ED9300FA10AC /* Frameworks */,
 				AC44349B1D30ED9300FA10AC /* Resources */,
+				0613D17DCF51B133794CC13E /* [CP] Embed Pods Frameworks */,
+				52777AF5C09462A5A817FD8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,6 +317,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0613D17DCF51B133794CC13E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4192B188D5798B3BC3E897A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52777AF5C09462A5A817FD8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC4434991D30ED9300FA10AC /* Sources */ = {
@@ -437,11 +512,19 @@
 		};
 		AC4434C31D30ED9300FA10AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9900A5CC10CF68F4F8F79A3 /* Pods-RetailStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RetailStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TW.RetailStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -449,11 +532,19 @@
 		};
 		AC4434C41D30ED9300FA10AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A129197528DC1C8366D2646 /* Pods-RetailStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RetailStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TW.RetailStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

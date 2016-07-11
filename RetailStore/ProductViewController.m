@@ -11,6 +11,7 @@
 #import "WebServiceCommunicator.h"
 #import "Product.h"
 #import "AppDelegate.h"
+#import <UIImageView+WebCache.h>
 #define kNetworkErrorMessage @"Internet or Wi fi is not available."
 #define kProductCellID @"ProductCellId"
 #define PADDING 10
@@ -86,8 +87,9 @@
     cell.priceLabel.text = [NSString stringWithFormat:@" Price: %@",product.productPrice];
     cell.vNameLabel.text = product.venderName;
     cell.vAddLabel.text= product.venderAddress;
-    //    cell.productImage.image = [UIImage ima]
-    // to refresh table in collectionview cell
+    // Here we use the new provided sd_setImageWithURL: method to load the web image
+    [cell.productImage sd_setImageWithURL:[NSURL URLWithString:product.imageURL]
+                      placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
     return cell;
     

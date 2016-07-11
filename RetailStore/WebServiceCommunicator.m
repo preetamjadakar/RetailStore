@@ -61,6 +61,8 @@
                         pr.venderName = [dic valueForKey:@"vendorname"];
                         pr.venderAddress = [dic valueForKey:@"vendoraddress"];
                         pr.phoneNumber = [dic valueForKey:@"phoneNumber"];
+                        pr.imageURL = [dic valueForKey:@"productImg"];
+
                         [mainArray addObject:pr];
                     }
                     completionHandler(mainArray,nil);
